@@ -42,6 +42,7 @@ class MultiLogicAdapterTestCase(ChatBotTestCase):
         confidence, statement = self.adapter.process(Statement('Howdy!'))
 
         self.assertEqual(confidence, 0.5)
+        self.assertEqual(statement.confidence, 0.5)
         self.assertEqual(statement, 'Good morning.')
 
     def test_get_greatest_confidence(self):
